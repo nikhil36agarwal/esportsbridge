@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com -->
+    <title id="title">Esports Bridge</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Libre Baskerville" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet " />
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0) !important;
+        }
+        
+        .modal-content {
+            margin: auto;
+            top: 30%;
+            padding: 0px;
+            border: 1px solid rgb(26, 25, 25);
+            width: 50%;
+            background-color: transparent;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s
+        }
+        
+        @media screen and (max-width: 480px) {
+            .modal-content {
+                width: 95%;
+            }
+        }
+        
+        .container-fluid {
+            padding: 50px 0px;
+        }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#myPage"><img src="images/logoweb.png" class="logoweb"></a>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a>Affiliate Partners</a></li>
+        </ul>
+        <div class="container">
+            <div class="navbar-header">
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.397), rgb(0, 0, 0));"><br>
+        <div class="container">
+            <div class="col-sm-6"><br>
+                <h4>About The Program</h4>
+                <p style="font-size:16px;word-spacing:3px;font-family:Lato;text-align:left ">
+                    Esports Bridge has come up with an <u>'Affiliate Partner Program'</u> to allow gaming enthusiasts to be a part of our journey.<br> Esports Bridge is a platform that connects gamers and fans. Currently, we offer two service types:-
+                    <br>• Personalized video message <br>• Video call<br><br> Each Affiliate Partner will be given a unique <u>'referral code'</u> , <i>if a purchase is being made using that referral code, then the affiliate partner will get flat<b> 5% commission</b> on the
+                    entire amount.</i><br>*Moreover, the customers who use your 'referral code' will also get flat 5% discount for using the referral.<br><br>
+
+                    <br>
+                    <p style="text-align:center"><a href="index.html" style="color:rgb(188, 201, 228);font-size:18px;">Visit EsportsBridge</a></p>
+                </p>
+            </div>
+            <div class="col-sm-6 text-center">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeemsWHEGmAmt1YeLphEnOyOho0x2_9ARjGzJRvJSN-TV0Y7w/viewform?embedded=true" width="100%" height="500" frameborder="0px" marginheight="0" marginwidth="0px">Loading…</iframe>
+                <br><a id="tnc" style="color:rgb(255, 177, 103);font-size:18px">Terms And Conditions</a>
+            </div><br>
+
+        </div>
+
+        <div class="text-center">
+            <a href="https://mailto:esportsbridge@gmail.com">
+             Contact Us  
+            </a><br>
+            <a href="https://forms.gle/knXpkgvQLxG2bkABA" target="_blank">
+               Enroll As a Gamer  
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.397), rgb(0, 0, 0));"><br>
+    </div>
+
+    <div id="terms" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="background-color: rgb(255, 255, 255);padding: 8px;top:100px;">
+            <h4 style="font-size: 20px;height: fit-content;padding-bottom: 0px;color: rgb(0, 0, 0)">Terms And Conditions</h4>
+            <hr style="width: 100%;">
+            <p style="color: rgb(22, 22, 22);">1) Every Affiliate Partner will only be given one referral code and every referral code is unique.<br><br> 2) The partner has full freedom to promote our platform, if he/she is found doing any fraud/spam, his/her partnership will be cancelled.
+                Moreover, he won't receive the pending dues.<br><br>3) Every time the 'referral code' is used, the Affiliate Partner will receive a dedicated email about the same.<br><br> 4) The pay-out will be made every 30 days via the respective pay-out
+                medium.
+                <br><br> 5) If any order placed through your 'referral code' gets cancelled, then the Affiliate Partner won't get the commission for that particular order.<br><br>
+            </p>
+            <button id="ok" class="btn" style="background-color:lightgreen;font-size:18px">Ok</button>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("terms");
+
+        document.getElementById('tnc').onclick = function() {
+            modal.style.display = "block";
+        }
+        document.getElementById('ok').onclick = function() {
+            modal.style.display = "none";
+
+        }
+    </script>
+</body>
+
+</html>

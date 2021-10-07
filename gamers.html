@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 50px;
+            font-family: lato;
+            background-color: rgba(0, 0, 0, 0.397);
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.397), rgb(0, 0, 0));
+            padding: 10px 15px 20px 15px;
+            font-size: 30px;
+            z-index: 50;
+            margin: 0px;
+        }
+        
+        .thumbimg:hover {
+            transform: rotateZ(-3deg);
+            transition: transform 0.5s;
+            transition-delay: 0.1s;
+            transform-style: preserve-3d;
+            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.568);
+        }
+    </style>
+
+    <title>EsportsBridge</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: rgba(0, 0, 0, 0.397);">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" style="width:10%" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>  
+                          
+      </button>
+                <a class="navbar-brand" href="#myPage"><img src="images/logoweb.png" class="logoweb"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="index.html">HOME</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="background-color: black;"><br><br></div>
+    <div class="jumbotron text-center" style="padding: 8%;">
+
+        <h1 style="font-family:Montserrat;">GAMERS </h1>
+
+    </div>
+
+
+    <!-- Container (Gamers Section) -->
+    <div>
+        <!-- category bar -->
+        <div class="sticky container-fluid" style="margin-top: -30px;"><button class="openbtn" onclick="openNav()"> ☰ Categories </button><input class="form-control " id="myInput" type="text" placeholder="Search.."></div><br><br>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <li><a href="#" class="all">ALL</a></li>
+                <li><a href="#" class="pubg">PUBG</a></li>
+                <li><a href="#" class="freefire">FREE FIRE</a></li>
+                <li><a href="#" class="cod">CALL OF DUTY</a></li>
+                <li><a href="#" class="minecraft">MINECRAFT</a></li>
+            </div>
+        </div>
+
+        <div id="gamers" class="container-fluid" style="background-color: rgba(0, 0, 0, 0.397);margin-top: -45px;">
+
+            <div class="row text-center" id="myList">
+
+                <div class="col-sm-4 item pubg ">
+                    <a href="gamers/beast-gaming.html">
+                        <div class="thumbnail ">
+                            <img src="gamers/profile/beastgaming.jpeg" alt="Paris" width="400" height="100" class="thumbimg">
+                            <p class="text"><strong>Beast Gaming</strong></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 item pubg ">
+                    <a href="gamers/gaming-mania.html">
+                        <div class="thumbnail ">
+                            <img src="gamers/profile/gamingmania.jpg" alt="Paris" width="400" height="100" class="thumbimg">
+                            <p class="text"><strong>Gaming Mania</strong></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 item freefire ">
+                    <a href="gamers/gamer1.html">
+                        <div class="thumbnail ">
+                            <img src="gamers/profile/deadbonegaming.png" alt="Paris" width="400" height="100" class="thumbimg">
+                            <p class="text"><strong>Deadbone Gaming</strong></p>
+                        </div>
+                    </a>
+                </div>
+
+                <br>
+            </div>
+
+            <br>
+        </div>
+    </div>
+
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid " style="background-color: rgba(117, 117, 117, 0.39);">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+            <div class="col-sm-5" style="font-size: 16px;">
+                <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+                <p><i class="fa fa-google-plus">esportsplayway@gmail.com</i></p>
+                <p><i class="fa fa-youtube"><a href="#link">Youtube@esportsplayway</a></i></p>
+                <p><i class="fa fa-facebook"><a href="#link">FacebookPage</a></i></p>
+                <p><i class="fa fa-instagram"><a href="#link">InstagramPage</a></i></p>
+
+            </div>
+            <div class="col-sm-7 slideanim">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="container-fluid text-center" style="background-color: rgb(0, 0, 0); color: cornsilk;">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up" style="color: aliceblue;"></span>
+        </a><br>
+
+        <p><img src="images/logoweb.png" alt="logo" class="logoweb"></p>
+        <p><a href="t&c.html"> Terms & Conditions</a></p>
+        <p><a href="#terms&conditions">Credits</a></p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+
+        function getId(id) {
+            return document.getElementById(id).value;
+        }
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myList div").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#myNav li a').click(function() {
+                // store anything commonly called in variables to speed up your code
+                const $this = $(this)
+                const ourClass = $this.attr('class');
+                const $ourHolder = $('#myList');
+                // reset the active class on all the buttons
+                $('#myNav li').removeClass('active');
+                // update the active state on our clicked button
+                $this.parent().addClass('active');
+
+                if (ourClass === 'all') {
+                    // show all our items
+                    $ourHolder.children('div.item').show();
+                } else {
+                    // hide all elements that don't share ourClass
+                    $ourHolder.children('div:not(.' + ourClass + ')').hide();
+                    // show all elements that do share ourClass
+                    $ourHolder.children('div.' + ourClass).show();
+                }
+                return false;
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $('.faq_question').click(function() {
+
+                if ($(this).parent().is('.open')) {
+                    $(this).closest('.faq').find('.faq_answer_container').slideUp();
+                    $(this).closest('.faq').removeClass('open');
+                } else {
+                    $('.faq_answer_container').slideUp();
+                    $('.faq').removeClass('open');
+                    $(this).closest('.faq').find('.faq_answer_container').slideDown();
+                    $(this).closest('.faq').addClass('open');
+                }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

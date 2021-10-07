@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title id="title">""|</title>
+    <link rel="icon" href="../images/icon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi Mincho" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum Myeongjo" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169245857-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-169245857-1');
+    </script>
+
+    <link rel="stylesheet" href="../css/gamerinfo.css">
+    <link rel="shortcut icon" href="../images/icon_IX1_icon.ico">
+    <link href="https://api.razorpay.com/v1">
+    <style>
+        a {
+            color: tomato;
+        }
+        
+        a:hover {
+            color: antiquewhite;
+        }
+    </style>
+    <script>
+        var profile = "Gaming Mania";
+        var rname = " - Gulshan Bhartiy"
+        var profileId = "EB@gamingmania";
+        var ytlink = 'https://www.youtube.com/channel/UCjJzRmZllNEx8bswMlLQjJQ/featured';
+        var img_src = "profile/gamingmania.jpg";
+        var bio = "Gaming Mania is A youtube Streamer who streams PUBG mobile lite" + "<br><a href=" + ytlink + "target='_blank'> Channel Link</a>";
+        var shoutout = 500;
+        var videocall = 1000;
+        var wish = 1;
+        var ytpromo = 5000;
+        var amount = 0;
+    </script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="grad0">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" style="width:10%" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>  
+                          
+      </button>
+                <a class="navbar-brand" href="#myPage"><img src="../images/logoweb.png" class="logoweb"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../gamers.html">GAMERS</a></li>
+                    <li><a href="../index.html">HOME</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container-fluid text-center">
+        <div class="col-sm-5 row " id="img"><br>
+
+        </div>
+        <div class="col-sm-7 row">
+            <h2 id="name" style="font-family:Merienda;font-weight: 900;"></h2>
+            <h3 id="rname" style="font-family:  Sawarabi Mincho;"></h3>
+            <h6 id="bio" style="font-family:Nanum Myeongjo;word-spacing: 2px;font-weight: 400;">
+            </h6><br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="btn" id="grad1" onclick="shoutOut">SHOUTOUT | PRICE</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn" id="grad3">GAMEPLAY | PRICE</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn" id="grad2" onclick="videoCall">VIDEOCALL | PRICE</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn" id="grad4">YOUTUBE PROMOTION</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!--MODAL BOX-->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="details" name="detailsform">
+                <p id="order" class="text-center" style="font-size: 20px;text-align: justify;padding: 5px 0px 0px 5px;"></p>
+                <h4 id="profile" class="text-center" style="color: black;font-family: Georgia, 'Times New Roman', Times, serif;font-size: 23px;"></h4>
+                <hr>
+                <label for="price">Amount</label>
+                <input type="text" value="" id="price" readonly style="background-color: rgba(230, 230, 230, 0.473);">
+                <label for="P_name"><mark style="color: red;background-color: transparent;">⋆</mark>Your Name</label>
+                <input type="text" placeholder="" name="P_name" id="pname" required>
+                <label for="P_email"><mark style="color: red;background-color: transparent;">⋆</mark>Email</label>
+                <input type="text" placeholder="" name="P_email" id="email">
+                <div id="constr1" style="display: none;">
+                    <label for="whom"><mark style="color: red;background-color: transparent;" >⋆</mark>For Whom</label>
+                    <input type="text" placeholder="" name="whom" value="whom" id="whom">
+                </div>
+                <div id="constr2" style="display: none;">
+                    <label for="instauname"><mark style="color: red;background-color: transparent;">⋆</mark>Instagram username/Bussiness name</label>
+                    <input type="text" placeholder="" name="instauname" value="username" id="instauname" required>
+                </div>
+                <div id="constr3" style="display: none;">
+                    <label for="ytchannel"><mark style="color: red;background-color: transparent;">⋆</mark>Youtube Channel/Bussiness name</label>
+                    <input type="text" placeholder="" name="ytchannel" id="ytchannel" value="yt" required>
+                </div>
+                <div id="constr4" style="display: none;">
+                    <label for="message"><mark style="color: red;background-color: transparent;" >⋆</mark>Message
+                    (<span id="txt-rem" style="font-size: 12px;text-align: right">300 Chars remaining</span>)</label>
+                    <input type="text" placeholder="" id="message" name="message" minlength="30" maxlength="300" value="" style="height:200%">
+                </div>
+                <div id="constr5" style="display: none;">
+                    <label for="date"><mark style="color: red;background-color: transparent;" >⋆</mark>ON When<span style="font-size: 12px;font-weight: lighter;">(Read Terms & Conditions)</span></label>
+                    <input type="date" name="date" id="date"><br><br>
+                </div>
+                <input type="hidden" id="serviceId" value="" style="display: none;">
+                <input type="radio" name="accept"><label for="accept">Accept To <a href="../t&c.html" target="_blank">Terms And Conditions</a></label>
+                <button type="button" class="text-center submit" id="rzp-button1" onclick="validate()"><p id="book">amt</p></button>
+
+
+            </form>
+        </div>
+    </div>
+
+    <!--MODAL BOX on successful payment-->
+    <div id="success" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="text-center" style="background-color: rgba(32, 255, 24, 0.349);">
+                <h4 style="color: black;font-size: 20px;padding-top: 15px;height: fit-content;">Thank You</h4>
+                <hr style="width: 98%;border:  2px solid rgb(0, 48, 0);">
+            </div>
+            <div class="text-center">
+                <h6 style="color: rgb(0, 26, 0);">BOOKING IS SUCCESFULLY DONE</h6><br>
+            </div>
+            <div>
+                <div> <label for="paytoken">Your Pay Token :</label>
+                    <input type="text" readonly value="" id="paytoken" style="width: 100%;height: fit-content"></div>
+
+            </div>
+            <div>
+                You will be further notified about the Service via Mail.
+            </div>
+            <div class="text-center"> <button type="button" class="btn text-center ok" id="close" onClick="window.location.reload()">Ok</button></div>
+
+        </div>
+    </div>
+    <!--Char counter-->
+    <script>
+        const textarea = document.getElementById('message');
+        const remchars = document.getElementById('txt-rem');
+        const maxchar = 300;
+        textarea.addEventListener('input', () => {
+            const remaining = maxchar - textarea.value.length;
+            remchars.innerHTML = remaining + " Characters remaining";
+            const color = remaining < maxchar * 0.1 ? 'red' : null;
+            remchars.style.color = color;
+        });
+    </script>
+    <!-- THE DATA OF GAMERS TO BE STORED BELOW -->
+
+
+    <!-- ASSIGNING VARIABLES DATA -->
+    <script>
+        document.getElementById("bio").innerHTML = bio;
+        document.getElementById("title").innerHTML = profile + "-EsportsBRIDGE";
+        document.getElementById("img").innerHTML = "<img src='" + img_src + "' alt='profile' class='profile'>";
+        document.getElementById("name").innerHTML = profile;
+        document.getElementById("rname").innerHTML = rname;
+        document.getElementById("profile").innerHTML = profile;
+        document.getElementById("grad1").innerHTML = "SHOUTOUT | ₹" + shoutout;
+        document.getElementById("grad2").innerHTML = "VIDEOCALL | ₹" + videocall;
+        document.getElementById("grad3").innerHTML = "GET A WISH | ₹" + wish;
+        document.getElementById("grad4").innerHTML = "YT PROMOTION | ₹" + ytpromo;
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn1 = document.getElementById("grad1");
+        var btn2 = document.getElementById("grad2");
+        var btn3 = document.getElementById("grad3");
+        var btn4 = document.getElementById("grad4");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn1.onclick = function() {
+            amount = shoutout;
+            document.getElementById('constr1').style.display = "none";
+            document.getElementById('constr2').style.display = "block";
+            document.getElementById('constr3').style.display = "none";
+            document.getElementById('constr4').style.display = "block";
+            document.getElementById('constr5').style.display = "none";
+            document.getElementById('instauname').value = "";
+            document.getElementById("price").value = shoutout;
+            document.getElementById("order").innerHTML = "Shoutout From";
+            document.getElementById("serviceId").value = profileId + "A";
+            document.getElementById("book").innerHTML = "Book for ₹ " + amount;
+            modal.style.display = "block";
+        };
+        btn2.onclick = function() {
+            amount = videocall;
+            document.getElementById('constr1').style.display = "none";
+            document.getElementById('constr2').style.display = "block";
+            document.getElementById('constr3').style.display = "none";
+            document.getElementById('constr4').style.display = "none";
+            document.getElementById('constr5').style.display = "none";
+            document.getElementById('instauname').value = "";
+            document.getElementById("price").value = videocall;
+            document.getElementById("order").innerHTML = "5 to 7 minutes Videocall From";
+            document.getElementById("serviceId").value = profileId + "B";
+            document.getElementById("book").innerHTML = "Book for ₹ " + amount;
+            modal.style.display = "block";
+        };
+        btn3.onclick = function() {
+            modal.style.display = "block";
+            amount = wish;
+            document.getElementById('constr1').style.display = "block";
+            document.getElementById('constr2').style.display = "none";
+            document.getElementById('constr3').style.display = "none";
+            document.getElementById('constr4').style.display = "block";
+            document.getElementById('constr5').style.display = "block";
+            document.getElementById('whom').value = "";
+            document.getElementById("order").innerHTML = "Get a Wish From";
+            document.getElementById("price").value = wish;
+            document.getElementById("order").innerHTML = "";
+            document.getElementById("serviceId").value = profileId + "C";
+            document.getElementById("book").innerHTML = "Book for ₹ " + amount;
+
+        };
+        btn4.onclick = function() {
+            amount = ytpromo;
+            document.getElementById('constr1').style.display = "none";
+            document.getElementById('constr2').style.display = "none";
+            document.getElementById('constr3').style.display = "block";
+            document.getElementById('constr4').style.display = "block";
+            document.getElementById('constr5').style.display = "none";
+            document.getElementById('ytchannel').value = "";
+            document.getElementById("order").innerHTML = "Promote a Youtube Channel From";
+            document.getElementById("serviceId").value = profileId + "D";
+            document.getElementById("book").innerHTML = "Book for ₹ " + amount;
+            document.getElementById("price").value = ytpromo;
+            modal.style.display = "block";
+        };
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        //  When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="../database.js"></script>
+
+    <script src="../main.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+</body>
+
+</html>

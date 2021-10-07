@@ -1,0 +1,353 @@
+/* //stylesheet.// */
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.bg-grey {
+    background-color: rgb(85, 85, 85);
+}
+
+h1 {
+    font-family: monospace;
+    letter-spacing: 8px;
+    color: rgb(0, 209, 199);
+    text-shadow: 0px 3px 2px rgb(0, 0, 0);
+}
+
+h2 {
+    font-size: 28px;
+    color: #ffffff;
+    font: 400 Montserrat;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+h6 {
+    font-size: 18px;
+    color: rgb(230, 230, 230);
+    font-family: Montserrat;
+}
+
+h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: -15px;
+    padding-bottom: 5px;
+}
+
+.jumbotron {
+    background-color: #000000f1;
+    color: rgb(219, 255, 247);
+    font-weight: bold;
+    padding: 50px 25px;
+    font-family: 'Times New Roman', monospace;
+}
+
+.logoweb {
+    margin-top: -12px;
+    width: 120px;
+    height: 50px;
+    padding-bottom: 5px;
+}
+
+.profile {
+    width: 90%;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 80%;
+    height: max-content;
+    border-radius: 5px;
+    color: floralwhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    box-shadow: 0px 1px 1px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+.btn:hover {
+    color: rgb(202, 202, 202);
+    box-shadow: 0px 1px 1px rgb(0, 0, 0);
+}
+
+.brand {
+    height: fit-content;
+    padding-bottom: 0px;
+    width: fit-content;
+    font-size: 15px;
+}
+
+.grad0 {
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(32, 0, 30), rgb(24, 0, 0));
+    /* Standard syntax (must be last) */
+}
+
+#grad1 {
+    background-color: rgb(0, 255, 242);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, rgb(4, 134, 95), rgb(0, 0, 0));
+    /* Standard syntax (must be last) */
+}
+
+#grad2 {
+    background-color: rgb(0, 0, 59);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #010030, rgb(0, 0, 0));
+    /* Standard syntax (must be last) */
+}
+
+#grad3 {
+    background-color: rgb(94, 0, 0);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #fffb00, #000000);
+    /* Standard syntax (must be last) */
+}
+
+#grad4 {
+    background-color: rgb(12, 44, 0);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #fd1d1d, #000000);
+    /* Standard syntax (must be last) */
+}
+
+.navbar {
+    margin-bottom: 0px;
+    background-color: #181818c0;
+    z-index: 9999;
+    border: 0;
+    text-align: center;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: #000000 !important;
+    font-weight: bolder;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 80px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(216, 216, 216));
+    margin: auto;
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 30%;
+    transition: ease-in;
+    transition-duration: 0.5s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .modal-content {
+        width: 50%;
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #140333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.ok {
+    width: 25%;
+    background-color: rgb(5, 63, 255);
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=text],
+select,
+input[type=date],
+input[type=password] {
+    width: 95%;
+    padding: 10px;
+    font-size: auto;
+    margin: 5px 5px 22px 5px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.label {
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    font-weight: lighter;
+}
+
+input[type=text]:focus,
+select:focus,
+input[type=date]:focus,
+input[type=password]:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: 1px solid rgb(30, 0, 161);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.submit {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(20, 6, 37);
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    padding: 5px 0px 0px 0px;
+    margin-top: 5px;
+}
+
+.submit:hover {
+    background-color: rgb(13, 4, 24);
+    height: fit-content;
+}
+
+label {
+    margin-left: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+hr {
+    border: 2px solid rgb(68, 0, 64);
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    h4 {
+        font-size: 15px;
+    }
+    h6 {
+        font-size: 15px;
+    }
+    .flip-card-back {
+        background-color: #383838;
+        color: white;
+        transform: rotateY(180deg);
+    }
+    .ul {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    .flip-card-back {
+        background-color: #383838;
+        color: white;
+        transform: rotateY(180deg);
+    }
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn {
+        width: 80%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .brand {
+        height: fit-content;
+        padding-bottom: 0px;
+        width: max-content;
+        font-size: 10px;
+    }
+    .logoweb {
+        margin-top: -15px;
+        width: 80px;
+        margin-left: -5px;
+        height: 40px;
+    }
+    .btn {
+        font-size: 12px;
+        padding: auto 2px;
+    }
+}
